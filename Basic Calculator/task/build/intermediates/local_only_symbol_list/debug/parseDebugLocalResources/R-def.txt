@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id addButton
+id button0
+id button1
+id button2
+id button3
+id button4
+id button5
+id button6
+id button7
+id button8
+id button9
+id clearButton
+id displayEditText
+id divideButton
+id dotButton
+id equalButton
+id gridLayout
+id multiplyButton
+id myCustomEditTxt
+id subtractButton
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style AppTheme

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.hyperskill.calculator.Stage1UnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-17T02:14:26" hostname="CHINAZA-PC" time="13.799">
+  <properties/>
+  <testcase name="checkViews" classname="org.hyperskill.calculator.Stage1UnitTest" time="13.799"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
