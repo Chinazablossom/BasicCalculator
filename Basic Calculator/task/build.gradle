@@ -6,7 +6,6 @@ android {
     namespace "org.hyperskill.calculator"
 
     defaultConfig {
-
         applicationId "org.hyperskill.calculator"
         minSdkVersion hs.android.minSdkVersion
         targetSdkVersion hs.android.targetSdkVersion

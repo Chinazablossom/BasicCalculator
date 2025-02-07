@@ -10,4 +10,4 @@ environment: Android
 content:
   - Basic Calculator
 mode: Study
-yaml_version: 1
+yaml_version: 2

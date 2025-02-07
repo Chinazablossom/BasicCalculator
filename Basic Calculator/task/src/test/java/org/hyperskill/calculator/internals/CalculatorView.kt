@@ -9,7 +9,6 @@ import org.junit.Assert.assertEquals
 
 class CalculatorView<T : Activity>(test: BasicCalculatorUnitTest<T>) {
 
-
     val displayEditText = with(test) {
         activity.findViewByString<EditText>("displayEditText").also { displayEditText ->
             displayEditText.assertInitialDisplayEditText()

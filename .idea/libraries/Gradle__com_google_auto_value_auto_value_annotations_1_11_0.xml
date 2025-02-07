@@ -2,13 +2,13 @@
   <library name="Gradle: com.google.auto.value:auto-value-annotations:1.11.0" type="java-imported" external-system-id="GRADLE">
     <properties groupId="com.google.auto.value" artifactId="auto-value-annotations" version="1.11.0" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../Program Files/gradle-8.9-bin/gradle-8.9/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.11.0/f0d047931d07cfbc6fa4079854f181ff62891d6f/auto-value-annotations-1.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/gradle-8.9/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.11.0/f0d047931d07cfbc6fa4079854f181ff62891d6f/auto-value-annotations-1.11.0.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../../Program Files/gradle-8.9-bin/gradle-8.9/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.11.0/ec1118f0d25e0f594e40f65a93c4f3885a0d94a5/auto-value-annotations-1.11.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/gradle-8.9/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.11.0/ec1118f0d25e0f594e40f65a93c4f3885a0d94a5/auto-value-annotations-1.11.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../../Program Files/gradle-8.9-bin/gradle-8.9/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.11.0/523edc72a56d07e69e7868b8136c0f430de79a12/auto-value-annotations-1.11.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/gradle-8.9/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.11.0/523edc72a56d07e69e7868b8136c0f430de79a12/auto-value-annotations-1.11.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
