@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.hyperskill.calculator.Stage2UnitTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-02-07T18:34:42" hostname="CHINAZA-PC" time="28.395">
+<testsuite name="org.hyperskill.calculator.Stage2UnitTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-02-08T17:07:31" hostname="CHINAZA-PC" time="22.249">
   <properties/>
-  <testcase name="test00_checkButtonsWork" classname="org.hyperskill.calculator.Stage2UnitTest" time="21.727"/>
-  <testcase name="test01_checkClearButtonWorks" classname="org.hyperskill.calculator.Stage2UnitTest" time="2.202"/>
-  <testcase name="test02_checkZeroButtonLock" classname="org.hyperskill.calculator.Stage2UnitTest" time="1.013"/>
-  <testcase name="test03_checkDotButtonLock" classname="org.hyperskill.calculator.Stage2UnitTest" time="1.035"/>
-  <testcase name="test04_checkDotButtonLockAfterNumber" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.871"/>
-  <testcase name="test05_checkNoZeroesToTheLeft" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.753"/>
-  <testcase name="test06_checkNoDotsWithoutInteger" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.79"/>
+  <testcase name="test00_checkButtonsWork" classname="org.hyperskill.calculator.Stage2UnitTest" time="16.137"/>
+  <testcase name="test01_checkClearButtonWorks" classname="org.hyperskill.calculator.Stage2UnitTest" time="1.798"/>
+  <testcase name="test02_checkZeroButtonLock" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.874"/>
+  <testcase name="test03_checkDotButtonLock" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.771"/>
+  <testcase name="test04_checkDotButtonLockAfterNumber" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.834"/>
+  <testcase name="test05_checkNoZeroesToTheLeft" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.979"/>
+  <testcase name="test06_checkNoDotsWithoutInteger" classname="org.hyperskill.calculator.Stage2UnitTest" time="0.853"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
