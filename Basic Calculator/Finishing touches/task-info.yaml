@@ -51,6 +51,9 @@ files:
   - name: src/test/java/org/hyperskill/calculator/Stage4UnitTest.kt
     visible: false
     learner_created: false
+  - name: src/main/res/values/ids.xml
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13540#comment
 status: Unchecked
 record: -1

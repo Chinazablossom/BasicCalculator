@@ -1,6 +1,8 @@
 package org.hyperskill.calculator
 
+import android.graphics.Color
 import android.os.Bundle
+import android.provider.CalendarContract.Colors
 import android.text.InputType
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.apply {
             displayEditText.inputType = InputType.TYPE_NULL
+            clearButton.setBackgroundColor(Color.GRAY)
+
             clearButton.setOnClickListener {
                 txt.clear()
                 displayEditText.text.clear()
@@ -33,11 +37,13 @@ class MainActivity : AppCompatActivity() {
                 button5, button6, button7, button8, button9
             ).also {
                 it.forEach { btn ->
+                    btn.setBackgroundColor(Color.DKGRAY)
                     btn.setOnClickListener {
                         inputNum(btn)
                     }
                 }
             }
+            dotButton.setBackgroundColor(Color.DKGRAY)
             dotButton.setOnClickListener {
                 inputDecimalPoint()
             }
@@ -155,7 +161,7 @@ class MainActivity : AppCompatActivity() {
                     "+" -> {
                         txt.clear()
                         txt.append(exp.varX?.plus(exp.varY!!)).also {
-                            displayEditText.hint = it
+                            displayEditText.hint = "${it.toString().toDouble().toInt()}"
                             displayEditText.text.clear()
                         }
                         exp.varX = txt.toString().toDouble()
@@ -164,7 +170,7 @@ class MainActivity : AppCompatActivity() {
                     "*" -> {
                         txt.clear()
                         txt.append(exp.varX?.times(exp.varY!!)).also {
-                            displayEditText.hint = it
+                            displayEditText.hint = it.toString().toInt().toString()
                             displayEditText.text.clear()
                         }
                         exp.varX = txt.toString().toDouble()
@@ -199,6 +205,7 @@ class MainActivity : AppCompatActivity() {
     )
 
 }
+
 
 
 
