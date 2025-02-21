@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.hyperskill.calculator.Stage3UnitTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-02-08T17:07:54" hostname="CHINAZA-PC" time="7.976">
+<testsuite name="org.hyperskill.calculator.Stage3UnitTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-02-21T23:48:54" hostname="CHINAZA-PC" time="10.288">
   <properties/>
-  <testcase name="test00_checkCalculatorWaitsForTheNextValue" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.51"/>
-  <testcase name="test01_checkCalculatorAdds" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.747"/>
-  <testcase name="test02_checkCalculatorSubtracts" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.923"/>
-  <testcase name="test03_checkCalculatorMultiplies" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.644"/>
-  <testcase name="test04_checkCalculatorDivides" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.463"/>
-  <testcase name="test05_checkCalculatorSupportsNegativeNumbersOnFirstTerm" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.58"/>
-  <testcase name="test06_checkCalculatorSupportsNegativeNumbersOnSecondTerm" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.751"/>
-  <testcase name="test07_checkCalculatorCanDoMultipleActions" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.806"/>
-  <testcase name="test08_checkNoNegativeZeroesToTheLeft" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.555"/>
-  <testcase name="test09_checkNoNegativeDotsWithoutZero" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.752"/>
-  <testcase name="test10_checkMinusOperationAfterZeroAsResult" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.618"/>
-  <testcase name="test11_checkMinusOperationWithNegativeSecondTermAfterZeroAsResult" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.625"/>
+  <testcase name="test00_checkCalculatorWaitsForTheNextValue" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.739"/>
+  <testcase name="test01_checkCalculatorAdds" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.989"/>
+  <testcase name="test02_checkCalculatorSubtracts" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.842"/>
+  <testcase name="test03_checkCalculatorMultiplies" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.696"/>
+  <testcase name="test04_checkCalculatorDivides" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.9"/>
+  <testcase name="test05_checkCalculatorSupportsNegativeNumbersOnFirstTerm" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.6"/>
+  <testcase name="test06_checkCalculatorSupportsNegativeNumbersOnSecondTerm" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.784"/>
+  <testcase name="test07_checkCalculatorCanDoMultipleActions" classname="org.hyperskill.calculator.Stage3UnitTest" time="1.339"/>
+  <testcase name="test08_checkNoNegativeZeroesToTheLeft" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.764"/>
+  <testcase name="test09_checkNoNegativeDotsWithoutZero" classname="org.hyperskill.calculator.Stage3UnitTest" time="1.063"/>
+  <testcase name="test10_checkMinusOperationAfterZeroAsResult" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.832"/>
+  <testcase name="test11_checkMinusOperationWithNegativeSecondTermAfterZeroAsResult" classname="org.hyperskill.calculator.Stage3UnitTest" time="0.737"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

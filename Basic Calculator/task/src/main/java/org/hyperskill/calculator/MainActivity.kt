@@ -2,11 +2,13 @@ package org.hyperskill.calculator
 
 import android.graphics.Color
 import android.os.Bundle
-import android.provider.CalendarContract.Colors
 import android.text.InputType
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import org.hyperskill.calculator.databinding.ActivityMainBinding
+import org.hyperskill.calculator.models.ArithmeticExpression
+import java.math.BigInteger
+import kotlin.text.toBigDecimal
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -69,18 +71,17 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             if (txt.isNotBlank() && txt[0] == '0' && !txt.contains(".") && btn == button0) return
             txt.append(btn.text).also {
-                if (!txt.contains('.')){
-                    if (it[0] == '0' && btn.text != "0"){
+                if (!txt.contains('.')) {
+                    if (it[0] == '0' && btn.text != "0") {
                         txt.deleteCharAt(0)
-                    }else if  (txt[0] == '-' && txt[1] == '0' ) {
+                    } else if (txt[0] == '-' && txt[1] == '0') {
                         txt.deleteCharAt(1)
                     }
                 }
 
             }
             displayEditText.setText(txt)
-            if (exp.varX != null) exp.varY = txt.toString().toDouble()
-
+            if (exp.varX != null) exp.varY = txt.toString().toBigDecimal()
         }
     }
 
@@ -110,14 +111,16 @@ class MainActivity : AppCompatActivity() {
                         displayEditText.setText(txt)
                     }
                 }
+
                 exp.operation != null && txt.isBlank() -> {
                     txt.append("-")
                     displayEditText.setText(txt)
                 }
+
                 txt.isNotBlank() -> {
                     if (txt.toString() == "-") return
-                    exp.varX = txt.toString().toDouble().also {
-                        displayEditText.hint = it.toInt().toString()
+                    exp.varX = txt.toString().toBigDecimal().also {
+                        displayEditText.hint = checkIfInt(it, txt)
                         displayEditText.text.clear()
                     }
                     txt.clear()
@@ -131,23 +134,25 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             when {
                 txt.isNotBlank() -> {
-                    exp.varX = txt.toString().toDouble().also {
-                        displayEditText.hint = it.toInt().toString()
+                    exp.varX = txt.toString().toBigDecimal().also {
+                        displayEditText.hint = checkIfInt(it, txt)
                         displayEditText.text.clear()
                     }
                     txt.clear()
                     txt.append(btn.text)
                     exp.operation = txt.toString()
                     txt.clear()
+                    exp.varY = null
 
                 }
 
                 else -> {
-                    exp.varX = displayEditText.hint.toString().toDouble()
+                    exp.varX = displayEditText.hint.toString().toBigDecimal()
                     txt.clear()
                     txt.append(btn.text)
                     exp.operation = txt.toString()
                     txt.clear()
+                    exp.varY = null
                 }
             }
 
@@ -155,57 +160,69 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun doCalculation() {
+
         binding.apply {
             if (!exp.operation.isNullOrBlank()) {
+                if (exp.varY == null) exp.varY = displayEditText.hint.toString().toBigDecimal()
                 when (exp.operation) {
                     "+" -> {
                         txt.clear()
-                        txt.append(exp.varX?.plus(exp.varY!!)).also {
-                            displayEditText.hint = "${it.toString().toDouble().toInt()}"
+                        val value = exp.varX?.add(exp.varY!!)
+                        txt.append(value).also { it ->
+                            displayEditText.hint = checkIfInt(value, it)
                             displayEditText.text.clear()
                         }
-                        exp.varX = txt.toString().toDouble()
+                        exp.varX = txt.toString().toBigDecimal()
                     }
 
                     "*" -> {
                         txt.clear()
-                        txt.append(exp.varX?.times(exp.varY!!)).also {
-                            displayEditText.hint = it.toString().toInt().toString()
+                        val value = exp.varX?.times(exp.varY!!)
+                        txt.append(value).also {
+
+                            displayEditText.hint = checkIfInt(value, it)
                             displayEditText.text.clear()
                         }
-                        exp.varX = txt.toString().toDouble()
+                        exp.varX = txt.toString().toBigDecimal()
                     }
 
                     "/" -> {
                         txt.clear()
-                        txt.append(exp.varX?.div(exp.varY!!)).also {
-                            displayEditText.hint = it
+                        val value = try {
+                            exp.varX?.divide(exp.varY!!)
+                        }catch (e: ArithmeticException){
+                            0
+                        }
+                        txt.append(value).also {
+                            displayEditText.hint = checkIfInt(value, it)
                             displayEditText.text.clear()
                         }
-                        exp.varX = txt.toString().toDouble()
+                        exp.varX = txt.toString().toBigDecimal()
                     }
 
                     "-" -> {
                         txt.clear()
-                        txt.append(exp.varX?.minus(exp.varY!!)).also {
-                            displayEditText.hint = it
+                        val value = exp.varX?.minus(exp.varY!!)
+                        txt.append(value).also {
+                            displayEditText.hint = checkIfInt(value, it)
                             displayEditText.text.clear()
                         }
-                        exp.varX = txt.toString().toDouble()
+                        exp.varX = txt.toString().toBigDecimal()
                     }
                 }
             }
         }
+
     }
 
-    private inner class ArithmeticExpression(
-        var varX: Double? = null,
-        var operation: String? = null,
-        var varY: Double? = null,
-    )
+    private fun checkIfInt(value: Any?, builder: StringBuilder): String {
+        val finalVal = if (value.toString().substringAfter(".")
+                .toBigInteger() > BigInteger.ZERO
+        )
+            builder.toString() else
+            builder.toString().toBigDecimal().toBigInteger().toString()
+
+        return finalVal
+    }
 
 }
-
-
-
-

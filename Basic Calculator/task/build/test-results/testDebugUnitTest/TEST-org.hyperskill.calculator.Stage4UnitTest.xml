@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.hyperskill.calculator.Stage4UnitTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-02-21T23:49:05" hostname="CHINAZA-PC" time="5.542">
+  <properties/>
+  <testcase name="test00_checkCalculatorIntegerHint" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.876"/>
+  <testcase name="test01_checkCalculatorIntegerHintTypedAsDouble" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.775"/>
+  <testcase name="test02_checkCalculatorIntegerResult" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.706"/>
+  <testcase name="test03_checkCalculatorDoubleHint" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.513"/>
+  <testcase name="test04_checkCalculatorDoubleResult" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.717"/>
+  <testcase name="test05_checkCalculatorRepeatsOperationWithEqualsAfterEquals" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.629"/>
+  <testcase name="test06_checkEqualsAfterOperation" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.717"/>
+  <testcase name="test07_checkEqualsAfterOperationWithResultOfLastOperation" classname="org.hyperskill.calculator.Stage4UnitTest" time="0.605"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
